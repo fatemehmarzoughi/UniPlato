@@ -2,7 +2,8 @@
 /*                                   Imports                                  */
 /* -------------------------------------------------------------------------- */
 import React from 'react';
-import { Text } from 'react-native';
+import { Text, View } from 'react-native';
+import { generalStyles } from '../../constants/styles/generalStyles';
 
 /* -------------------------------------------------------------------------- */
 /*                                Class Serach                                */
@@ -10,6 +11,10 @@ import { Text } from 'react-native';
 
 export default class Search extends React.Component {
   render(): React.ReactNode {
-    return <Text>Search</Text>;
+    return (
+      <View style={[generalStyles.center, generalStyles.coverHeight]}>
+        <Text>Search</Text>
+      </View>
+    );
   }
 }
