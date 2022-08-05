@@ -1,6 +1,12 @@
+/* -------------------------------------------------------------------------- */
+/*                                   Imports                                  */
+/* -------------------------------------------------------------------------- */
 import { StyleSheet } from "react-native";
-import { windowHeight } from "../general";
+import { statusBarSpace, windowHeight } from "../general";
 
+/* -------------------------------------------------------------------------- */
+/*                               General Styles                               */
+/* -------------------------------------------------------------------------- */
 export const generalStyles = StyleSheet.create({
     center: {
         display: 'flex',
@@ -9,5 +15,8 @@ export const generalStyles = StyleSheet.create({
     },
     coverHeight: {
         height: windowHeight,
+    },
+    statusBarSpace: {
+        marginTop: statusBarSpace
     }
 })
