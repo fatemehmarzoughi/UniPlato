@@ -3,6 +3,9 @@
 /* -------------------------------------------------------------------------- */
 import { Dimensions, StatusBar, Platform } from "react-native";
 
+/* ---------------------------------- Urls ---------------------------------- */
+export const BASE_URL: string = 'https://uniplato.staging.uniplato.us';
+
 /* -------------------------------- Platform -------------------------------- */
 export const isIOS: boolean = Platform.OS === 'ios';
 

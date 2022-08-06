@@ -19,17 +19,25 @@ import { generalStyles } from './constants/styles/generalStyles';
 /* -------------------------------------------------------------------------- */
 /*                                Class Router                                */
 /* -------------------------------------------------------------------------- */
-export default class Router extends Component {
 
-  buttonTab = (Icon: ReactNode, focused: boolean, tabName: string) : ReactNode => {
+export default class Router extends Component {
+  buttonTab = (
+    Icon: ReactNode, 
+    focused: boolean, 
+    tabName: string, 
+  ) : ReactNode => {
     return focused ? 
-    (<View style={[styles.focusedTabButton, generalStyles.row]} >
-      {Icon}
-      <Text style={styles.focusedTabButtonText}>
-        {tabName}
-      </Text>
-    </View> ) :
-    Icon
+    (
+        <View style={[
+             styles.focusedTabButton,
+             generalStyles.row,
+            ]} >
+          {Icon}
+          <Text style={styles.focusedTabButtonText}>
+            {tabName}
+          </Text>
+        </View> 
+    ) : Icon
   }
   
   iconFiltering = (tabName: string, focused: boolean) : ReactNode => {
@@ -38,25 +46,25 @@ export default class Router extends Component {
         return this.buttonTab(
           <HomeSvg width={20} />, 
           focused, 
-          'Home'
+          'Home',
         )
       case 'Search':
         return this.buttonTab(
           <SearchSVG width={20} />, 
           focused, 
-          'Search'
+          'Search',
         )
       case 'Profile':
         return this.buttonTab(
           <ProfileSVG width={20} />, 
           focused, 
-          'Profile'
+          'Profile',
         )
       case 'Posts':
         return this.buttonTab(
           <PostsSVG width={20} />, 
           focused, 
-          'Posts'
+          'Posts',
         )
     }
   }
