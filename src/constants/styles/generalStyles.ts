@@ -2,7 +2,7 @@
 /*                                   Imports                                  */
 /* -------------------------------------------------------------------------- */
 import { StyleSheet } from "react-native";
-import { statusBarSpace, windowHeight } from "../general";
+import { danger, md, statusBarSpace, windowHeight } from "../general";
 
 /* -------------------------------------------------------------------------- */
 /*                               General Styles                               */
@@ -18,5 +18,9 @@ export const generalStyles = StyleSheet.create({
     },
     statusBarSpace: {
         marginTop: statusBarSpace
+    },
+    errorText: {
+        color: danger,
+        fontSize: md,
     }
 })
