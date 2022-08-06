@@ -13,6 +13,12 @@ export const generalStyles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
+    row: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        flexDirection: 'row',
+    },
     coverHeight: {
         height: windowHeight,
     },

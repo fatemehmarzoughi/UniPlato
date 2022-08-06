@@ -10,47 +10,54 @@ import Posts from './pages/posts';
 import Profile from './pages/profile';
 import Search from './pages/search';
 import { bgColor, mainColor, sm } from './constants/general';
+import HomeSvg from './constants/svgs/home.svg';
+import SearchSVG from './constants/svgs/search.svg';
+import ProfileSVG from './constants/svgs/profile.svg';
+import PostsSVG from './constants/svgs/posts.svg';
+import { generalStyles } from './constants/styles/generalStyles';
 
 /* -------------------------------------------------------------------------- */
 /*                                Class Router                                */
 /* -------------------------------------------------------------------------- */
 export default class Router extends Component {
 
+  buttonTab = (Icon: ReactNode, focused: boolean, tabName: string) : ReactNode => {
+    return focused ? 
+    (<View style={[styles.focusedTabButton, generalStyles.row]} >
+      {Icon}
+      <Text style={styles.focusedTabButtonText}>
+        {tabName}
+      </Text>
+    </View> ) :
+    Icon
+  }
+  
   iconFiltering = (tabName: string, focused: boolean) : ReactNode => {
-    let returnElement: ReactNode;
     switch (tabName) {
-      case 'Home':
-        focused ? 
-        returnElement = 
-          <View style={styles.focusedTabButton} >
-            <Text style={styles.focusedTabButtonText}>H {tabName}</Text>
-          </View> :
-        returnElement = <Text style={styles.focusedTabButtonText}>H</Text>
-        return returnElement;
+      case 'Home': 
+        return this.buttonTab(
+          <HomeSvg width={20} />, 
+          focused, 
+          'Home'
+        )
       case 'Search':
-        focused ? 
-        returnElement = 
-          <View style={styles.focusedTabButton} >
-            <Text style={styles.focusedTabButtonText}>S {tabName}</Text>
-          </View> :
-        returnElement = <Text style={styles.focusedTabButtonText}>S</Text>
-        return returnElement;
+        return this.buttonTab(
+          <SearchSVG width={20} />, 
+          focused, 
+          'Search'
+        )
       case 'Profile':
-        focused ? 
-        returnElement = 
-          <View style={styles.focusedTabButton} >
-            <Text style={styles.focusedTabButtonText}>P {tabName}</Text>
-          </View> :
-        returnElement = <Text style={styles.focusedTabButtonText}>P</Text>
-        return returnElement;
+        return this.buttonTab(
+          <ProfileSVG width={20} />, 
+          focused, 
+          'Profile'
+        )
       case 'Posts':
-        focused ? 
-        returnElement = 
-          <View style={styles.focusedTabButton} >
-            <Text style={styles.focusedTabButtonText}>Po {tabName}</Text>
-          </View> :
-        returnElement = <Text style={styles.focusedTabButtonText}>Po</Text>
-        return returnElement;
+        return this.buttonTab(
+          <PostsSVG width={20} />, 
+          focused, 
+          'Posts'
+        )
     }
   }
 
@@ -69,8 +76,8 @@ export default class Router extends Component {
         >
           <Tab.Screen name="Home" component={Home} />
           <Tab.Screen name="Search" component={Search} />
-          <Tab.Screen name="Profile" component={Profile} />
           <Tab.Screen name="Posts" component={Posts} />
+          <Tab.Screen name="Profile" component={Profile} />
         </Tab.Navigator>
       </NavigationContainer>
     );
@@ -86,5 +93,6 @@ const styles = StyleSheet.create({
   },
   focusedTabButtonText: {
     color: mainColor,
+    marginLeft: 3,
   }
 })
