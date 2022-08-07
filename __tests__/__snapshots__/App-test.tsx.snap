@@ -1,0 +1,228 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Button component correctly with the props's details informations 1`] = `
+<View
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "backgroundColor": "#B3EBF7",
+      "borderRadius": 10,
+      "margin": 10,
+      "opacity": 1,
+      "padding": 15,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#00BEDF",
+      }
+    }
+  >
+    buttonText
+  </Text>
+</View>
+`;
+
+exports[`renders Card component correctly with the post's details informations 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "white",
+      "borderRadius": 20,
+      "margin": 10,
+      "marginBottom": 25,
+      "padding": 20,
+      "paddingBottom": 25,
+    }
+  }
+>
+  <Image
+    source={
+      Object {
+        "uri": "imageURL",
+      }
+    }
+    style={
+      Object {
+        "borderRadius": 25,
+        "height": 690,
+        "marginBottom": 30,
+        "width": 690,
+      }
+    }
+  />
+  <Text
+    style={
+      Object {
+        "fontSize": 20,
+        "fontWeight": "bold",
+        "marginBottom": 10,
+      }
+    }
+  >
+    title
+  </Text>
+  <Text
+    numberOfLines={3}
+    style={
+      Object {
+        "color": "gray",
+        "fontSize": 15,
+      }
+    }
+  >
+    description
+  </Text>
+</View>
+`;
+
+exports[`renders card component correctly with the post's details informations 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "white",
+      "borderRadius": 20,
+      "margin": 10,
+      "marginBottom": 25,
+      "padding": 20,
+      "paddingBottom": 25,
+    }
+  }
+>
+  <Image
+    source={
+      Object {
+        "uri": "imageURL",
+      }
+    }
+    style={
+      Object {
+        "borderRadius": 25,
+        "height": 690,
+        "marginBottom": 30,
+        "width": 690,
+      }
+    }
+  />
+  <Text
+    style={
+      Object {
+        "fontSize": 20,
+        "fontWeight": "bold",
+        "marginBottom": 10,
+      }
+    }
+  >
+    title
+  </Text>
+  <Text
+    numberOfLines={3}
+    style={
+      Object {
+        "color": "gray",
+        "fontSize": 15,
+      }
+    }
+  >
+    description
+  </Text>
+</View>
+`;
+
+exports[`renders card component correctly with the post's details informations 2`] = `
+<View
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "backgroundColor": "#B3EBF7",
+      "borderRadius": 10,
+      "margin": 10,
+      "opacity": 1,
+      "padding": 15,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#00BEDF",
+      }
+    }
+  >
+    buttonText
+  </Text>
+</View>
+`;
+
+exports[`renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "white",
+      "borderRadius": 20,
+      "margin": 10,
+      "marginBottom": 25,
+      "padding": 20,
+      "paddingBottom": 25,
+    }
+  }
+>
+  <Image
+    source={
+      Object {
+        "uri": "imageURL",
+      }
+    }
+    style={
+      Object {
+        "borderRadius": 25,
+        "height": 690,
+        "marginBottom": 30,
+        "width": 690,
+      }
+    }
+  />
+  <Text
+    style={
+      Object {
+        "fontSize": 20,
+        "fontWeight": "bold",
+        "marginBottom": 10,
+      }
+    }
+  >
+    title
+  </Text>
+  <Text
+    numberOfLines={3}
+    style={
+      Object {
+        "color": "gray",
+        "fontSize": 15,
+      }
+    }
+  >
+    description
+  </Text>
+</View>
+`;
