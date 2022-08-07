@@ -5,17 +5,18 @@ import React, { ReactNode, Component } from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import { Animated, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import Home from './pages/home';
-import Posts from './pages/posts';
-import Profile from './pages/profile';
-import Search from './pages/search';
-import { bgColor, mainColor, sm } from './constants/general';
-import HomeSvg from './constants/svgs/home.svg';
-import SearchSVG from './constants/svgs/search.svg';
-import ProfileSVG from './constants/svgs/profile.svg';
-import PostsSVG from './constants/svgs/posts.svg';
-import { generalStyles } from './constants/styles/generalStyles';
-
+import Home from '@src/pages/home';
+import Posts from '@src/pages/posts';
+import Profile from '@src/pages/profile';
+import Search from '@src/pages/search';
+import { bgColor, mainColor, sm } from '@src/constants/general';
+import HomeSvg from '@src/constants/svgs/home.svg';
+import SearchSVG from '@src/constants/svgs/search.svg';
+import ProfileSVG from '@src/constants/svgs/profile.svg';
+import PostsSVG from '@src/constants/svgs/posts.svg';
+import { generalStyles } from '@src/constants/styles/generalStyles';
+import Icon from 'react-native-vector-icons/EvilIcons';
+Icon.loadFont().then();
 /* -------------------------------------------------------------------------- */
 /*                                Class Router                                */
 /* -------------------------------------------------------------------------- */
@@ -43,7 +44,7 @@ export default class Router extends Component<Props, States> {
     }
   }
 
-  closeAnimationTiming = (state) : void => {
+  closeAnimationTiming = (state: Animated.Value) : void => {
     Animated.timing(state, {
       toValue: 3,
       duration: 500,
@@ -51,7 +52,7 @@ export default class Router extends Component<Props, States> {
     }).start();
   }
 
-  openAnimationTiming = (state) : void => {
+  openAnimationTiming = (state: Animated.Value) : void => {
     Animated.timing(state, {
       toValue: 80,
       duration: 500,
@@ -211,5 +212,10 @@ const styles = StyleSheet.create({
   focusedTabButtonText: {
     color: mainColor,
     marginLeft: 3,
+  },
+  icon: {
+    fontSize: 30,
+    color: mainColor,
+    backgroundColor: 'red'
   }
 })

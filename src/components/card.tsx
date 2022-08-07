@@ -3,8 +3,8 @@
 /* -------------------------------------------------------------------------- */
 import React, { ReactNode, Component } from "react";
 import { View, Image, Text, StyleSheet } from "react-native";
-import { lg, xlg, sm, windowWith, xxlg, md, white } from "../constants/general";
-import { Post } from "../core/types";
+import { lg, xlg, sm, windowWith, xxlg, md, white } from "@src/constants/general";
+import { Post } from "@src/core/types";
 
 /* ------------------------------- Props type ------------------------------- */
 type Props = {

@@ -1,8 +1,8 @@
 import * as React from "react";
 import renderer from "react-test-renderer";
-import Card from "../src/components/card";
-import { Post } from "../src/core/types";
-import Button from '../src/components/button';
+import Card from "@src/components/card";
+import { Post } from "@src/core/types";
+import Button from '@src/components/button';
 
 it(`renders Card component correctly with the post's details informations`, () => {
   const item: Post = {

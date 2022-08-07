@@ -3,7 +3,7 @@
 /* -------------------------------------------------------------------------- */
 import React from 'react';
 import { Text, View } from 'react-native';
-import { generalStyles } from '../../constants/styles/generalStyles';
+import { generalStyles } from '@src/constants/styles/generalStyles';
 
 /* -------------------------------------------------------------------------- */
 /*                                 Class Home                                 */

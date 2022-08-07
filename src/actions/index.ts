@@ -1,5 +1,5 @@
-import axios from "../core/_axios";
-import { Post } from "../core/types";
+import axios from "@src/core/_axios";
+import { Post } from "@src/core/types";
 import { GET_ALL_POSTS, GET_ALL_POSTS_SUCCESS, GET_ALL_POSTS_FAILED } from "./types";
 
 export type PostAction = {

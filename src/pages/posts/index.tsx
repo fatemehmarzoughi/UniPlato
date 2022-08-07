@@ -2,8 +2,8 @@
 /*                                   Imports                                  */
 /* -------------------------------------------------------------------------- */
 import { connect } from "react-redux";
-import { getAllPosts } from "../../actions";
-import { AppStates } from "../../core/types";
+import { getAllPosts } from "@src/actions";
+import { AppStates } from "@src/core/types";
 import Posts from "./posts";
 
 const mapStateToProps = (state: AppStates) => {

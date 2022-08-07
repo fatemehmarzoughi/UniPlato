@@ -1,6 +1,6 @@
 import React from "react";
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import { bgColor, lg, mainColor, md, sm } from "../constants/general";
+import { StyleSheet, Text, TouchableOpacity } from "react-native";
+import { bgColor, mainColor, md, sm } from "@src/constants/general";
 
 type Props = {
     buttonText: string,

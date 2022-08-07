@@ -1,4 +1,4 @@
-import { PostStates } from "../reducer/postsReducer"
+import { PostStates } from "@src/reducer/postsReducer"
 
 export type Post = {
     id: number,

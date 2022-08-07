@@ -3,12 +3,12 @@
 /* -------------------------------------------------------------------------- */
 import React, { ReactNode, Component } from 'react';
 import { ActivityIndicator, FlatList, Text, View } from 'react-native';
-import Card from '../../components/card';
-import { generalStyles } from '../../constants/styles/generalStyles';
-import { Post } from '../../core/types';
-import { PostStates } from '../../reducer/postsReducer';
-import SimpleButton from '../../components/button';
-import { mainColor } from '../../constants/general';
+import Card from '@src/components/card';
+import { generalStyles } from '@src/constants/styles/generalStyles';
+import { Post } from '@src/core/types';
+import { PostStates } from '@src/reducer/postsReducer';
+import SimpleButton from '@src/components/button';
+import { mainColor } from '@src/constants/general';
 
 /* -------------------------------------------------------------------------- */
 /*                                 Class Posts                                */

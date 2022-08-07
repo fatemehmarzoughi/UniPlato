@@ -1,6 +1,6 @@
-import { PostAction } from "../actions";
-import { GET_ALL_POSTS, GET_ALL_POSTS_SUCCESS, GET_ALL_POSTS_FAILED } from "../actions/types";
-import { Post } from "../core/types";
+import { PostAction } from "@src/actions";
+import { GET_ALL_POSTS, GET_ALL_POSTS_SUCCESS, GET_ALL_POSTS_FAILED } from "@src/actions/types";
+import { Post } from "@src/core/types";
 
 export interface PostStates {
     posts: Array<Post>,
