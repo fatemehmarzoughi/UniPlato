@@ -9,14 +9,19 @@ import Home from '@src/pages/home';
 import Posts from '@src/pages/posts';
 import Profile from '@src/pages/profile';
 import Search from '@src/pages/search';
-import { bgColor, mainColor, sm } from '@src/constants/general';
+import { bgColor, lg, mainColor, sm } from '@src/constants/general';
 import HomeSvg from '@src/constants/svgs/home.svg';
 import SearchSVG from '@src/constants/svgs/search.svg';
 import ProfileSVG from '@src/constants/svgs/profile.svg';
 import PostsSVG from '@src/constants/svgs/posts.svg';
+import HomeSvgGray from '@src/constants/svgs/home_gray.svg';
+import SearchSVGGray from '@src/constants/svgs/search_gray.svg';
+import ProfileSVGGray from '@src/constants/svgs/profile_gray.svg';
+import PostsSVGGray from '@src/constants/svgs/posts_gray.svg';
 import { generalStyles } from '@src/constants/styles/generalStyles';
 import Icon from 'react-native-vector-icons/EvilIcons';
 Icon.loadFont().then();
+
 /* -------------------------------------------------------------------------- */
 /*                                Class Router                                */
 /* -------------------------------------------------------------------------- */
@@ -36,7 +41,7 @@ export default class Router extends Component<Props, States> {
   constructor(props: Props){
     super(props);
     this.state = {
-      homeWidth: new Animated.Value(80),
+      homeWidth: new Animated.Value(85),
       searchWidth: new Animated.Value(3),
       profileWidth: new Animated.Value(3),
       postsWidth: new Animated.Value(3),
@@ -54,7 +59,7 @@ export default class Router extends Component<Props, States> {
 
   openAnimationTiming = (state: Animated.Value) : void => {
     Animated.timing(state, {
-      toValue: 80,
+      toValue: 85,
       duration: 500,
       useNativeDriver: false,
     }).start();
@@ -76,7 +81,7 @@ export default class Router extends Component<Props, States> {
             generalStyles.row,
             { width: tabId === 0 ? this.state.homeWidth : tabId === 1 ? this.state.searchWidth : tabId === 2 ? this.state.postsWidth : this.state.profileWidth }
            ]} >
-            { tabId === 0 ? <HomeSvg width={20} /> : tabId === 1 ? <SearchSVG width={20} /> : tabId === 2 ? <PostsSVG width={20} /> : <ProfileSVG width={20} /> }
+            { tabId === 0 ? <HomeSvg width={30} /> : tabId === 1 ? <SearchSVG width={30} /> : tabId === 2 ? <PostsSVG width={30} /> : <ProfileSVG width={30} /> }
             <Text style={styles.focusedTabButtonText}>{
               tabId === 0 ? 'Home' : tabId === 1 ? 'Search' : tabId === 2 ? 'Posts' : 'Profile'
             }</Text>
@@ -87,7 +92,7 @@ export default class Router extends Component<Props, States> {
             generalStyles.row,
             { width: tabId === 0 ? this.state.homeWidth : tabId === 1 ? this.state.searchWidth : tabId === 2 ? this.state.postsWidth : this.state.profileWidth }
            ]} >
-            { tabId === 0 ? <HomeSvg width={20} /> : tabId === 1 ? <SearchSVG width={20} /> : tabId === 2 ? <PostsSVG width={20} /> : <ProfileSVG width={20} /> }
+            { tabId === 0 ? <HomeSvgGray width={30} /> : tabId === 1 ? <SearchSVGGray width={30} /> : tabId === 2 ? <PostsSVGGray width={30} /> : <ProfileSVGGray width={30} /> }
           </Animated.View>
         )}
       </TouchableOpacity>
@@ -203,7 +208,7 @@ const styles = StyleSheet.create({
   focusedTabButton: {
     backgroundColor: bgColor,
     padding: sm,
-    borderRadius: sm,
+    borderRadius: lg,
   },
   unfocusedTabButton: {
     padding: sm,
