@@ -9,7 +9,7 @@ import Home from '@src/pages/home';
 import Posts from '@src/pages/posts';
 import Profile from '@src/pages/profile';
 import Search from '@src/pages/search';
-import { bgColor, lg, mainColor, sm } from '@src/constants/general';
+import { bgColor, lg, mainColor, sm, xxsm } from '@src/constants/general';
 import HomeSvg from '@src/constants/svgs/home.svg';
 import SearchSVG from '@src/constants/svgs/search.svg';
 import ProfileSVG from '@src/constants/svgs/profile.svg';
@@ -19,8 +19,6 @@ import SearchSVGGray from '@src/constants/svgs/search_gray.svg';
 import ProfileSVGGray from '@src/constants/svgs/profile_gray.svg';
 import PostsSVGGray from '@src/constants/svgs/posts_gray.svg';
 import { generalStyles } from '@src/constants/styles/generalStyles';
-import Icon from 'react-native-vector-icons/EvilIcons';
-Icon.loadFont().then();
 
 /* -------------------------------------------------------------------------- */
 /*                                Class Router                                */
@@ -209,9 +207,11 @@ const styles = StyleSheet.create({
     backgroundColor: bgColor,
     padding: sm,
     borderRadius: lg,
+    margin: xxsm
   },
   unfocusedTabButton: {
     padding: sm,
+    margin: xxsm,
     borderRadius: sm,
   },
   focusedTabButtonText: {

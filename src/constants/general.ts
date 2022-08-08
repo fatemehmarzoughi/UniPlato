@@ -15,6 +15,8 @@ export const windowWith: number = Dimensions.get('window').width;
 export const statusBarSpace: number = isIOS ? StatusBar.currentHeight! + 50 : 0;
 
 /* --------------------------------- Sizes --------------------------------- */
+export const xxsm: number = 3;
+export const xsm: number = 5;
 export const sm: number = 10;
 export const md: number = 15;
 export const lg: number = 20;
